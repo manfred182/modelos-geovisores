@@ -1,0 +1,41 @@
+<html>
+<head>
+<hta:application 
+     id="GeovisorESGEO"
+     border="thick"
+     caption="Geovisor ESGEO"
+     showintaskbar="yes"
+     singleinstance="yes"
+     sysmenu="yes"
+     maximizebutton="yes"
+     minimizebutton="yes"
+     resizable="yes"
+     innerborder="no"
+     contextmenu="no"
+     selection="no"
+>
+<title>Geovisor ESGEO</title>
+</head>
+<scroll=no style="overflow:hidden;">
+<script language="JavaScript">
+var windowWidth = 1200;
+var windowHeight = 800;
+window.resizeTo(windowWidth, windowHeight);
+window.moveTo((screen.width-windowWidth)/2, (screen.height-windowHeight)/2);
+
+function checkLoad() {
+    if (document.readyState == "complete") {
+        clearInterval(loadInterval);
+        // Adjust iframe size to fit window
+        document.getElementById("geoFrame").style.width = (windowWidth-10) + "px";
+        document.getElementById("geoFrame").style.height = (windowHeight-35) + "px";
+    }
+}
+
+var loadInterval = setInterval("checkLoad()", 100);
+</script>
+</head>
+<body style="margin:0;padding:0;">
+<iframe id="geoFrame" src="GeovisorESGEO_Portable/index.html" width="100%" height="100%" frameborder="0"></iframe>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovisor GIS para Desarrolladores</title>
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        .info-panel {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+        }
+        .layer-control {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .btn-secondary {
+            background: #95a5a6;
+        }
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        .projection-info {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div class="info-panel">
+        <h1>Geovisor GIS para Desarrolladores</h1>
+        <p>Explora diferentes tipos de datos geográficos y proyecciones</p>
+        <div class="projection-info">
+            <h3>Información de Proyección</h3>
+            <p id="projection-info-text">Cargando...</p>
+        </div>
+    </div>
+    
+    <div class="layer-control">
+        <h2>Control de Capas</h2>
+        <div id="base-layers">
+            <h3>Capas Base</h3>
+        </div>
+        <div id="overlay-layers">
+            <h3>Capas de Sobreposición</h3>
+        </div>
+        <div id="projection-options">
+            <h3>Proyecciones</h3>
+        </div>
+    </div>
+
+    <script src="lib/leaflet.js"></script>
+    <script src="lib/proj4.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

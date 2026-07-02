@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor Geográfico I2D - Portable</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-sA+e2k0K8l4j6Y9Z3J+7GkGnK0v7u6c6Zz3X6v6b6bI="
+          crossorigin=""/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wicket/0.3.0/wicket.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="map"></div>
+    <div id="sidebar">
+        <h2>Visor I2D</h2>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Buscar municipio...">
+            <button id="search-button">Buscar</button>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-o9N1j8zZj7k4K3L6J5J7J8J9J0J1J2J3J4J5J6J7J8J9"
+            crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
