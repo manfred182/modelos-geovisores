@@ -1,0 +1,15 @@
+GEOVISOR ESGEO - VERSIÓN PORTABLE
+===================================
+
+Para ejecutar el geovisor:
+1. Navegue a la carpeta GeovisorESGEO_Portable
+2. Haga doble clic en el archivo "index.html"
+3. El geovisor se abrirá en su navegador predeterminado
+
+Requisitos:
+- Navegador web moderno (Chrome, Firefox, Edge, Safari)
+- Conexión a internet para cargar algunos recursos desde CDNs (Bootstrap, jQuery, Leaflet)
+
+NOTA: Esta versión portable incluye todos los archivos necesarios excepto los recursos cargados desde CDNs externos, los cuales requieren conexión a internet para funcionar correctamente.
+
+Para uso completamente offline, sería necesario descargar y almacenar localmente todos los recursos externos.
